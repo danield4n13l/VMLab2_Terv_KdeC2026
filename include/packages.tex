@@ -1,0 +1,53 @@
+% Commonly used packages
+% Original by MechatronikaSzakosztaly/bme-gpk-thesis-latex on github
+
+\usepackage{ifthen} % Used in macros
+
+\usepackage[magyar]{babel} % Language support
+\usepackage[margin=2.5cm]{geometry} % Page margins
+\usepackage{amsfonts,amsmath,amssymb,siunitx} % Mathematical symbols
+\usepackage{lmodern} % Advanced version of the Computer Modern font
+\usepackage{microtype} % Improvements to typesetting
+\usepackage{setspace} % For setting line spacing
+\usepackage{cmap} % Enables more advanced text copying from the PDF document
+
+\usepackage[unicode]{hyperref} % For hyperlinks in the generated document
+\usepackage{booktabs} % For publication quality tables for LaTeX
+\usepackage{ltablex} % For long tables that span multiple pages
+\usepackage{graphicx} % For figure sizing
+\usepackage{xcolor} % For code coloring in listings
+\usepackage{listings} % For source code snippets
+\usepackage[amsmath,thmmarks]{ntheorem} % Theorem-like environments
+
+\usepackage{tikz} % For drawing figures
+\usepackage{pgfplots} % For plotting graphs
+
+%\usepackage{fancyhdr} % For easy to use headers and footers
+
+% thanks to http://tex.stackexchange.com/a/47579/71109
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+\newif\ifxetexorluatex % a new conditional starts as false
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi>0
+\xetexorluatextrue
+\fi
+
+\ifxetexorluatex
+\usepackage{fontspec}
+% Palatino clone font (Tex Gyre Pagella) for text and math
+\usepackage{newpxmath}
+\else
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[lighttt]{lmodern} % Advanced version of the Computer Modern font
+% Palatino clone font (Tex Gyre Pagella) for text and math
+\usepackage{tgpagella, newpxmath}
+\fi
+
+\usepackage{csquotes} % For context sensitive quotation marks
+\usepackage[
+  autocite=superscript,   % Citation style
+  backend=biber,     % Ez a kulcs! Nem 'bibtex'
+  style=numeric,        % Citation and bibliography style
+  sorting=nyt,        % Olyan sorrendben, ahogy hivatkozol rájuk
+]{biblatex} % Bibliography

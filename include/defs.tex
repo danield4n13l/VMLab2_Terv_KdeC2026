@@ -1,0 +1,81 @@
+%--------------------------------------------------------------------------------------
+% Változók beállítása [Setting variables]
+%--------------------------------------------------------------------------------------
+
+\newcommand{\applyvariables}{
+  \author{\authorName}
+  \title{\thesisTitle}
+
+  \hypersetup{
+    pdftitle={\thesisTitle},     % title
+    pdfauthor={lab4_Kde_C. csoport},     % author
+    pdfsubject={\munkatipus},    % subject of the document
+    pdfproducer={\authorName (Hello reader!)},   % producer of the document (organization)
+    pdfcreator={VSCode, MiKTeX, Caffeine and Nicotine (/j)}           % creator of the document (application)
+  }
+}
+
+\newcommand{\selecthungarian}{
+  \selectlanguage{magyar}
+  \setlength{\parindent}{2em}      % Paragraph indentation
+  \setlength{\parskip}{5pt}      % Paragraph spacing
+  \frenchspacing
+}
+
+\DeclareCiteCommand{\supercite}[\mkbibsuperscript]{
+    \iffieldundef{prenote}
+    {}
+    {}
+    \iffieldundef{postnote}
+    {}
+    {}
+  }
+  {\bibopenbracket%
+  \usebibmacro{prenote}%
+   \usebibmacro{citeindex}%
+   \usebibmacro{cite}%
+   \usebibmacro{postnote}%
+   \bibclosebracket}
+  {\supercitedelim}
+  {}
+
+% SIunitx beállítások magyar nyelvhez
+
+\sisetup{
+  output-decimal-marker = {,}, % Tizedesvessző használata
+  list-pair-separator = {\ és\ },   % Pár elválasztó
+  list-final-separator = {\ és\ },  % Utolsó elválasztó 
+  range-phrase = {--}         % Tartományokhoz
+}
+
+% Ltablex beállítások
+\keepXColumns
+
+% Bibliográfia fájl hozzáadása
+\addbibresource{include/references.bib} % Hivatkozások fájlja
+
+\def\authorName{Farkas Dániel Ádám} % Szerző(k) neve(i) [Author(s) name(s)]
+
+\def\authorNames{
+  Busa Vilmos (\textsf{QXBKLH})\\
+  Farkas Dániel Ádám (\textsf{EANDPD})\\
+  Murvai Gábor (\textsf{TBA})
+} % Szerző(k) neve(i) [Author(s) name(s)]
+
+\def\munkatipus{Tervezési feladat} % Munkatípus [Type of work]
+
+% Konzulens 1 [Consulent 1]
+\def\consulentATitle{Dr.~}
+\def\consulentAFamilyName{Kőrösi}
+\def\consulentAGivenName{Márton}
+
+% Témavezető
+\def\supervisorTitle{Dr.~}
+\def\supervisorFamilyName{Farkas}
+\def\supervisorGivenName{Tivadar}
+
+% Szakdolgozat címe 
+\def\thesisTitle{Tányéros rektifikáló berendezés tervezése}
+
+% Változók beállítása a PDF fájlhoz [Apply variables for the PDF file]
+\applyvariables
