@@ -6,6 +6,7 @@
 \usepackage[magyar]{babel} % Language support
 \usepackage[margin=2.5cm]{geometry} % Page margins
 \usepackage{amsfonts,amsmath,amssymb,siunitx} % Mathematical symbols
+\usepackage{mhchem}
 \usepackage{lmodern} % Advanced version of the Computer Modern font
 \usepackage{microtype} % Improvements to typesetting
 \usepackage{setspace} % For setting line spacing
@@ -35,6 +36,15 @@
 \ifxetexorluatex
 \usepackage{fontspec}
 % Palatino clone font (Tex Gyre Pagella) for text and math
+\setmainfont{texgyrepagella}[
+%  Path=include/fonts/,
+  Extension=.otf,
+  UprightFont=*-regular, 
+  BoldFont=*-bold, 
+  ItalicFont=*-italic, 
+  BoldItalicFont=*-bolditalic,
+  Ligatures=TeX
+  ]
 \usepackage{newpxmath}
 \else
 \usepackage[T1]{fontenc}

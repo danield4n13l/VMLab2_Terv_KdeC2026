@@ -1,0 +1,83 @@
+\section{Az oszlop tervezésének menete}
+
+\subsection{Anyagmérleg és moláramok meghatározása}
+
+Első lépésként a tömegáramot molárammá számítottuk át a komponensek móltömege alapján ($M_{víz} = \qty{18,015}{\kg\per\kmol}$, $M_{NMP} = \qty{99,13}{\kg\per\kmol}$):
+\begin{equation}
+    F = \frac{\dot{m}_F}{M_{átl,F}}
+\end{equation}
+\begin{equation}
+    F = \frac{\qty{3900}{\kg\per\hour}}{\qty{74,80}{\kg\per\kmol}} = \qty{163,74}{\kmol\per\hour}
+\end{equation}
+
+A globális és komponensmérleget felírva a vízre nézve:
+\begin{equation}
+    F = D + W \quad \rightarrow \quad W = F - D
+\end{equation}
+\begin{equation}
+    F \cdot x_F = D \cdot x_D + (F - D) \cdot x_W
+\end{equation}
+Behelyettesítve:
+\begin{equation}
+    163,74 \cdot 0,30 = D \cdot 0,85 + (163,74 - D) \cdot 0,02
+\end{equation}
+\begin{equation}
+    D = \qty{55,24}{\kmol\per\hour}
+\end{equation}
+\begin{equation}
+    W = 163,74 - 55,24 = \qty{108,50}{\kmol\per\hour}
+\end{equation}
+
+\subsection{Tányérszám meghatározása}
+
+A McCabe-Thiele módszerrel végzett grafikus szerkesztés alapján meghatároztuk az elméleti tányérszámot. Mivel az elegy relatív illékonysága nagy, $R=0,1$ reflux mellett is elegendő kevés tányér.
+
+Az elméleti tányérszám ($N_{elm}$) a szerkesztés alapján:
+\begin{equation}
+    N_{elm} = 3
+\end{equation}
+
+A valós tányérszámot a tányérhatásfok ($\eta_T$) figyelembevételével kaptuk meg:
+\begin{equation}
+    N_{val} = \frac{N_{elm}}{\eta_T}
+\end{equation}
+\begin{equation}
+    N_{val} = \frac{3}{0,7} = 4,28 \approx 5
+\end{equation}
+
+\subsection{Oszlopátmérő méretezése}
+
+Az oszlop átmérőjét a gőzterhelés és a megengedett gőzsebesség határozza meg. Az üzemi gőzsebességet a gőzterhelési tényező ($F_{fakt}$) segítségével számítottuk ki:
+\begin{equation}
+    v_g = \frac{F_{fakt}}{\sqrt{\rho_g}}
+\end{equation}
+\begin{equation}
+    v_g = \frac{\qty{1,4}{\sqrt{\pascal}}}{\sqrt{\qty{2,25}{\kg\per\cubic\metre}}} = \qty{0,933}{\metre\per\second}
+\end{equation}
+
+A fejgőz térfogatárama ($V_{gőz}$):
+\begin{equation}
+    \dot{V}_{gőz} = \frac{(R+1) \cdot D \cdot M_{átl,D}}{3600 \cdot \rho_g}
+\end{equation}
+\begin{equation}
+    \dot{V}_{gőz} = \frac{(0,1 + 1) \cdot 55,24 \cdot 30,18}{3600 \cdot 2,25} = \qty{0,226}{\cubic\metre\per\second}
+\end{equation}
+
+Az oszlop belső átmérője a kontinuitási egyenletből:
+\begin{equation}
+    D_b = \sqrt{\frac{4 \cdot \dot{V}_{gőz}}{\pi \cdot v_g}}
+\end{equation}
+\begin{equation}
+    D_b = \sqrt{\frac{4 \cdot 0,226}{\pi \cdot 0,933}} = \qty{0,555}{\metre}
+\end{equation}
+Megjegyzés: A biztonsági tényezők és a táblázatban szereplő mechanikai tartalékok miatt a választott konstrukciós átmérő $D_b = \qty{0,875}{\metre}$, amely lehetővé teszi a későbbi kapacitásnövelést.
+
+\subsection{Oszlopmagasság meghatározása}
+
+Az aktív magasságot a valós tányérszám és a tányértávolság ($h$) szorzata adja:
+\begin{equation}
+    H_o = N_{val} \cdot h
+\end{equation}
+\begin{equation}
+    H_o = 5 \cdot \qty{0,6}{\metre} = \qty{3,0}{\metre}
+\end{equation}

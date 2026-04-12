@@ -1,5 +1,4 @@
 {
-    "latex-workshop.latex.autoBuild.run": "never",
     "cSpell.language": "en,hu",
     "editor.wordWrap": "bounded",
     "latex-workshop.latex.outDir": "%DIR%/out/",
