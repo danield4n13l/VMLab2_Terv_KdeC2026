@@ -1,10 +1,42 @@
 
 \section{Összefoglalás}\label{sec:C1osszefogl}
 
-Az alábbi táblázat összefoglalja a véglegesített munkánk
-adatait. Számításaink alapján ilyen paraméterekkel rendelkező
-kondenzátor képes a kiadott feladat megfelelő elvégzésére.
+A tervezési feladat célja egy olyan tányéros rektifikáló oszlop és a hozzá tartozó hőcserélők méretezése volt, amely képes \qty{3900}{\kg\per\hour} tömegáramú, \num{30}\%-os víztartalmú víz-NMP (\textit{N}-metil-2-pirrolidon) elegy szétválasztására úgy, hogy a fejtermék (desztillátum) víztartalma \num{85}\%, míg a fenékterméké legfeljebb \num{2}\% legyen.
 
-% TODO If ready, put all calculated parameters here in a table
+A termodinamikai adatok elemzése során kiderült, hogy a víz és az NMP relatív illékonysága oly mértékben kedvező a megadott koncentrációtartományban, hogy a szétválasztás pusztán elméleti síkon nagyon alacsony (akár nulla közeli) refluxaránnyal is megvalósítható lenne. A gyakorlati megvalósíthatóság és a stabil üzemvitel érdekében $R = \num{0.1}$ refluxarányt választottunk.
+
+Ezen feltételek mellett a McCabe-Thiele szerkesztés $N_{\text{elm}} = \num{3}$ elméleti tányért eredményezett. A szitatányérok \num{70}\%-os becsült átlagos hatásfokával számolva a valós beépítendő tányérszám $N_{\text{val}} = \num{5}$ lett. A gőz- és folyadékáramok hidrodinamikai vizsgálata alapján az oszlop belső átmérője $D_b \approx \qty{0.67}{\metre}$, míg a szükséges fázisszétválási tereket és a tányértávolságokat (\qty{0.4}{\metre}) is magába foglaló teljes szerkezeti magassága $H_{\text{tot}} = \qty{3.0}{\metre}$ adódott. Ez egy viszonylag kompakt, kis méretű berendezést jelent, ami a kedvező termodinamikai tulajdonságoknak és a könnyű szétválaszthatóságnak köszönhető.
+
+Az energiamérlegek alapján a kondenzátor hőterhelése \qty{713.6}{\kilo\watt}, melynek elvonásához mintegy \qty{41.0}{\tonne\per\hour} hűtővíz szükséges. A forraló \qty{858.5}{\kilo\watt} hőigényét megközelítőleg \qty{1.7}{\tonne\per\hour} nagynyomású telített vízgőzzel biztosítjuk. A szükséges hőcserélő felületek iterációs becslése alapján egy \qty{26.0}{\metre\squared} felületű kondenzátor és egy \qty{38.2}{\metre\squared} felületű reboiler kiépítése javasolt.
+
+Összességében elmondható, hogy a tervezett berendezés és az előirányzott üzemeltetési paraméterek reálisak, a megadott tisztasági követelményeket maradéktalanul teljesítik, és a mérnöki gyakorlatban is biztonságosan megvalósíthatóak. Az alábbi táblázat összefoglalja a véglegesített munkánk során meghatározott legfőbb dimenziókat és üzemviteli adatokat.
+
+\begin{table}[htbp]
+  \centering
+  \caption{A tervezési feladat során meghatározott főbb paraméterek összefoglalása}
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Paraméter} & \textbf{Jele} & \textbf{Értéke} \\
+    \midrule
+    \multicolumn{3}{l}{\textit{Oszlop méretei és kialakítása}} \\
+    Valós tányérszám & $N_{\text{val}}$ & \num{5} \\
+    Belső átmérő & $D_b$ & \qty{0.674}{\metre} \\
+    Oszlop teljes magassága & $H_{\text{tot}}$ & \qty{3.0}{\metre} \\
+    Tányérok lyukszáma (egyenként) & $N_{\text{lyuk}, T}$ & \num{760} \\
+    \midrule
+    \multicolumn{3}{l}{\textit{Hőigények és segédanyagok}} \\
+    Kondenzátor hőterhelése & $\dot{Q}_{\text{kond}}$ & \qty{713.6}{\kilo\watt} \\
+    Hűtőközeg típusa & -- & Üzemi csapvíz \\
+    Hűtővíz megengedett melegedése & $\Delta T_{\text{hviz}}$ & \qty{15}{\kelvin} \\
+    Hűtővíz tömegárama & $\dot{m}_{\text{hviz}}$ & \qty{41.0}{\tonne\per\hour} \\
+    Kondenzátor hőátadó felülete & $A_{\text{kond}}$ & \qty{26.0}{\metre\squared} \\
+    Forraló (reboiler) hőterhelése & $\dot{Q}_{\text{reb}}$ & \qty{858.5}{\kilo\watt} \\
+    Fűtőközeg típusa & -- & Telített vízgőz \\
+    Fűtőgőz paraméterei & $T, p$ & \qty{230}{\celsius}, \qty{28}{\bar} \\
+    Fűtőgőz tömegárama & $\dot{m}_{\text{fg}}$ & \qty{1706}{\kg\per\hour} \\
+    Forraló hőátadó felülete & $A_{\text{reb}}$ & \qty{38.2}{\metre\squared} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \newpage
