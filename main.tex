@@ -8,7 +8,16 @@
 \input{include/defs}
 \input{include/lang_hu}
 
+\clubpenalty=10000
+\widowpenalty=10000
+\captionsetup{font=small,margin=0.125\textwidth}
+\tolerance=5000
+\emergencystretch=2em
+\hfuzz=0.2pt
+\vfuzz=0.2pt
+
 \pgfplotsset{compat=1.18}
+\usepackage{showframe}
 
 \begin{document}
 \pagenumbering{arabic}
@@ -26,6 +35,6 @@
 
 \include{chapters/Ckiertek}
 
-\printbibliography[title={Forrásjegyzék}]{}\addcontentsline{toc}{chapter}{Forrásjegyzék}
+\printbibliography[title={Forrásjegyzék}]\addcontentsline{toc}{chapter}{Forrásjegyzék}
 
 \end{document}

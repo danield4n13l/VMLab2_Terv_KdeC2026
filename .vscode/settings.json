@@ -88,4 +88,12 @@
         "-cd",
         "%TEX%",
     ],
+    "latex-workshop.hover.preview.mathjax.extensions": [
+        "cases",
+        "mhchem"
+    ],
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "",
+    "latex-workshop.view.pdf.color.dark.pageBorderColor": "",
+    "latex-workshop.view.pdf.color.dark.pageColorsBackground": "",
+    "latex-workshop.view.pdf.color.dark.pageColorsForeground": "",
 }
